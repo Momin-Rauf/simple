@@ -28,8 +28,23 @@ A simple WebSocket server built with FastAPI that can be deployed on Render.
 
 ### Running Locally
 
+#### Option 1: Using the startup scripts (Recommended)
+
+**Windows:**
 ```bash
-python main.py
+start_server.bat
+```
+
+**Unix/Linux/Mac:**
+```bash
+chmod +x start_server.sh
+./start_server.sh
+```
+
+#### Option 2: Manual startup
+
+```bash
+python start_server.py
 ```
 
 Or using uvicorn directly:
@@ -40,6 +55,14 @@ uvicorn main:app --reload --host 0.0.0.0 --port 8000
 The server will be available at:
 - HTTP: http://localhost:8000
 - WebSocket: ws://localhost:8000/ws
+
+### Testing Locally
+
+1. **Start the server** using one of the methods above
+2. **Open `index.html`** in your web browser
+3. **Start chatting!** The WebSocket connection will be established automatically
+
+You can open multiple browser tabs with `index.html` to test real-time messaging between clients.
 
 ## API Endpoints
 
